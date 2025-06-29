@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,43 +32,69 @@ const Header: React.FC = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-                isScrolled
-                    ? 'backdrop-blur-md shadow-lg'
-                    : 'bg-white backdrop-blur-md'
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md ${
+                isScrolled ? 'shadow-lg' : ''
             }`}
+            style={{
+                backgroundColor: isScrolled
+                    ? 'var(--color-bg-primary)'
+                    : 'var(--color-bg-primary)',
+            }}
         >
             <nav className="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
-                <div className="text-gray-900 text-xl font-bold">suu3</div>
-
-                <ul
-                    className={`
-          md:flex md:gap-5 md:static md:bg-transparent md:shadow-none md:p-0
-          ${
-              isMenuOpen
-                  ? 'flex flex-col fixed left-0 top-16 bg-white w-full text-center shadow-lg py-8 gap-4'
-                  : 'hidden'
-          }
-        `}
+                <div
+                    className="text-xl font-bold"
+                    style={{ color: 'var(--color-text-primary)' }}
                 >
-                    {[
-                        'home',
-                        'about',
-                        'skills',
-                        'services',
-                        'projects',
-                        'contact',
-                    ].map((item) => (
-                        <li key={item}>
-                            <button
-                                onClick={() => scrollToSection(item)}
-                                className={`cursor-pointer rounded-xl px-5 py-2 text-gray-800 border-1 border-gray-400 font-medium hover:text-primary transition-colors duration-300 capitalize ${isScrolled ? 'shadow-lg' : '  bg-white'}`}
-                            >
-                                {item === 'services' ? '担当範囲' : item}
-                            </button>
-                        </li>
-                    ))}
-                </ul>
+                    suu3
+                </div>
+
+                <div className="flex items-center gap-4">
+                    <ul
+                        className={`
+              md:flex md:gap-5 md:static md:bg-transparent md:shadow-none md:p-0
+              ${
+                  isMenuOpen
+                      ? 'flex flex-col fixed left-0 top-16 w-full text-center shadow-lg py-8 gap-4'
+                      : 'hidden'
+              }
+            `}
+                        style={{
+                            backgroundColor: isMenuOpen
+                                ? 'var(--color-bg-primary)'
+                                : 'transparent',
+                        }}
+                    >
+                        {[
+                            { id: 'home', label: 'Home' },
+                            { id: 'about', label: 'About' },
+                            { id: 'skills', label: 'スキル' },
+                            { id: 'services', label: '担当範囲' }, // 表示名だけ変えたい例
+                            { id: 'projects', label: 'プロジェクト' },
+                            { id: 'contact', label: 'お問い合わせ' },
+                        ].map(({ id, label }) => (
+                            <li key={id}>
+                                <button
+                                    onClick={() => scrollToSection(id)}
+                                    className={`cursor-pointer rounded-xl px-5 py-2 border-1 font-medium hover:text-primary transition-colors duration-300 capitalize ${isScrolled ? 'shadow-lg' : ''}`}
+                                    style={{
+                                        color: 'var(--color-text-primary)',
+                                        borderColor: 'var(--color-border)',
+                                        backgroundColor: 'var(--color-card-bg)',
+                                    }}
+                                >
+                                    {/* {item === 'services' ? '担当範囲' : item} */}
+                                    {label}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Theme Toggle - Desktop */}
+                    <div className="hidden md:block">
+                        <ThemeToggle />
+                    </div>
+                </div>
 
                 <button
                     onClick={toggleMenu}
@@ -75,19 +102,22 @@ const Header: React.FC = () => {
                     aria-label="Toggle menu"
                 >
                     <span
-                        className={`w-6 h-0.5 bg-gray-800 transition-transform duration-300 ${
+                        className={`w-6 h-0.5 transition-transform duration-300 ${
                             isMenuOpen ? 'rotate-45 translate-y-1.5' : ''
                         }`}
+                        style={{ backgroundColor: 'var(--color-text-primary)' }}
                     />
                     <span
-                        className={`w-6 h-0.5 bg-gray-800 transition-opacity duration-300 ${
+                        className={`w-6 h-0.5 transition-opacity duration-300 ${
                             isMenuOpen ? 'opacity-0' : ''
                         }`}
+                        style={{ backgroundColor: 'var(--color-text-primary)' }}
                     />
                     <span
-                        className={`w-6 h-0.5 bg-gray-800 transition-transform duration-300 ${
+                        className={`w-6 h-0.5 transition-transform duration-300 ${
                             isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
                         }`}
+                        style={{ backgroundColor: 'var(--color-text-primary)' }}
                     />
                 </button>
             </nav>

@@ -28,7 +28,11 @@ const Hero: React.FC = () => {
     return (
         <section
             id="home"
-            className="min-h-screen flex items-center pt-20 pb-5 bg-gradient-to-br from-blue-700  to-purple-600 text-white"
+            // className="min-h-screen flex items-center pt-20 pb-5 bg-gradient-to-br  from-blue-700 to-purple-600 dark:from-slate-900  dark:to-indigo-900 text-white"
+            className="min-h-screen flex items-center pt-20 pb-5"
+            style={{
+                backgroundImage: 'var(--color-bg-hero)',
+            }}
         >
             <div className="max-w-4xl mx-auto px-5 flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-1 max-w-2xl text-center md:text-left">
@@ -50,7 +54,7 @@ const Hero: React.FC = () => {
                         </button>
                         <button
                             onClick={() => scrollToSection('contact')}
-                            className="px-8 py-3 rounded-full transition-all border-1 border-white-600 text-white hover:bg-white hover:text-gray-800"
+                            className="px-8 py-3 rounded-full transition-all border-1 border-white-600 hover:bg-white hover:text-gray-800"
                         >
                             お問い合わせ
                         </button>
