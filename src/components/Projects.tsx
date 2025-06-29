@@ -3,16 +3,19 @@ import { projects } from '../data/portfolio';
 
 const Projects: React.FC = () => {
     return (
-        <section id="projects" className="py-20 bg-gray-50">
+        <section id="projects" className="py-20 ">
             <div className="max-w-6xl mx-auto px-5">
                 <h2 className="text-center text-4xl font-bold mb-12 relative after:content-[''] after:absolute after:bottom-[-10px] after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-primary after:rounded-full after:block">
-                    Projects
+                    プロジェクト
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
                         <div
                             key={project.id}
                             className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2"
+                            style={{
+                                backgroundColor: 'var(--color-card-bg)',
+                            }}
                         >
                             <div className="h-48 bg-gray-200 flex items-center justify-center">
                                 <span className="text-gray-500 text-lg">
@@ -23,7 +26,7 @@ const Projects: React.FC = () => {
                                 <h3 className="text-xl font-semibold text-secondary mb-3">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-600 mb-4 leading-relaxed">
+                                <p className="mb-4 leading-relaxed">
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-6">

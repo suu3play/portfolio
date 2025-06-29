@@ -8,7 +8,7 @@ import {
 
 export const skillCategories: SkillCategory[] = [
     {
-        title: 'Frontend',
+        title: 'フロンドエンド',
         skills: [
             { name: 'HTML', icon: 'fab fa-html5', color: 'text-orange-500' },
             { name: 'CSS', icon: 'fab fa-css3-alt', color: 'text-blue-500' },
@@ -23,7 +23,7 @@ export const skillCategories: SkillCategory[] = [
         ],
     },
     {
-        title: 'Backend',
+        title: 'バックエンド',
         skills: [
             { name: 'C#', icon: 'fab fa-microsoft', color: 'text-green-700' },
             { name: 'Python', icon: 'fab fa-python', color: 'text-yellow-500' },
@@ -67,24 +67,28 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
     {
         id: 1,
-        title: 'Webシステム移行プロジェクト',
+        title: '市町村事務処理システム',
         description:
-            'C#デスクトップアプリからReact/TypeScriptを使用したWebシステムへの移行',
-        tags: ['React', 'TypeScript', 'C#', 'SQL Server'],
+            '住民基本台帳・税関連（住民税、国保税、固定資産税等）・福祉情報に関わる事務処理システムの設計、開発、運用、保守',
+        tags: ['C#', 'SQL', 'Oracle'],
+    },
+    {
+        id: 1,
+        title: 'Webシステム移行',
+        description: 'C#デスクトップアプリからWebシステムへの移行',
+        tags: ['.NET', 'HTML', 'CSS', 'JavaScript', 'SQL Server', 'intramart'],
     },
     {
         id: 2,
         title: '業務自動化システム',
-        description:
-            'Power AutomateとSlack APIを連携した休暇申請・承認ワークフローの完全自動化',
-        tags: ['Power Automate', 'Slack API', 'ワークフロー'],
+        description: '既存システムととの連携や定型作業の完全自動化',
+        tags: ['Power Automate', 'Python'],
     },
     {
         id: 3,
         title: '電子帳簿保存法対応システム',
-        description:
-            '既存システムとAPI連携した電子帳簿保存法対応・PDF自動生成システム',
-        tags: ['C#', 'Web API', 'PDF出力'],
+        description: '既存システムとAPI連携した電子帳簿保存法対応',
+        tags: ['Python'],
     },
 ];
 
@@ -94,9 +98,10 @@ export const services: Service[] = [
         title: 'Webシステム開発',
         icon: 'fas fa-laptop-code',
         items: [
-            'C#デスクトップアプリからWebシステムへの移行',
-            'Web API開発・連携',
-            '電子帳簿保存法対応',
+            'C#デスクトップアプリ開発',
+            'Webシステムアプリ開発',
+            'Web API連携',
+            '法改正対応（税制改正、電子帳簿保存法対応等）',
             'メンテナンス・運用支援',
         ],
     },
@@ -119,7 +124,6 @@ export const services: Service[] = [
             '要件整理・ヒアリング',
             '業務フロー改善提案',
             '非エンジニア向けツール開発支援',
-            'システム導入サポート',
         ],
     },
     {
@@ -130,7 +134,6 @@ export const services: Service[] = [
             '帳票出力システム開発',
             'Excel VBAでのデータ加工自動化',
             'データベース連携システム',
-            'レポート自動生成',
         ],
     },
 ];

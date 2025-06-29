@@ -13,6 +13,9 @@ const Services: React.FC = () => {
                         <div
                             key={service.id}
                             className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-1"
+                            style={{
+                                backgroundColor: 'var(--color-card-bg)',
+                            }}
                         >
                             <div className="text-center mb-6">
                                 <i
@@ -26,7 +29,7 @@ const Services: React.FC = () => {
                                 {service.items.map((item, index) => (
                                     <li
                                         key={index}
-                                        className="flex items-start gap-3 text-gray-600 border-b border-gray-100 pb-2 last:border-b-0"
+                                        className="flex items-start gap-3 border-b border-gray-100 pb-2 last:border-b-0"
                                     >
                                         <span className="text-primary font-bold mt-1 flex-shrink-0">
                                             ✓

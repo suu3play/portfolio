@@ -48,14 +48,14 @@ const Contact: React.FC = () => {
         <section id="contact" className="py-20">
             <div className="max-w-6xl mx-auto px-5">
                 <h2 className="text-center text-4xl font-bold mb-12 relative after:content-[''] after:absolute after:bottom-[-10px] after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-primary after:rounded-full after:block">
-                    Contact
+                    お問い合わせ
                 </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     <div>
                         <h3 className="text-2xl font-semibold text-secondary mb-4">
                             お気軽にお問い合わせください
                         </h3>
-                        <p className="text-gray-600 mb-8">
+                        <p className="mb-8">
                             新しいプロジェクトや協力の機会について話し合いましょう
                         </p>
 
@@ -65,12 +65,8 @@ const Contact: React.FC = () => {
                                     key={index}
                                     className="flex items-center gap-4"
                                 >
-                                    <i
-                                        className={`${method.icon} text-primary w-5`}
-                                    ></i>
-                                    <span className="text-gray-600">
-                                        {method.text}
-                                    </span>
+                                    <i className={`${method.icon} w-5`}></i>
+                                    <span className="">{method.text}</span>
                                 </div>
                             ))}
                         </div>
@@ -92,7 +88,10 @@ const Contact: React.FC = () => {
 
                     <form
                         onSubmit={handleSubmit}
-                        className="bg-white p-8 rounded-lg shadow-lg"
+                        className="p-8 rounded-lg shadow-lg"
+                        style={{
+                            backgroundColor: 'var(--color-card-bg)',
+                        }}
                     >
                         <div className="mb-6">
                             <input
@@ -133,7 +132,12 @@ const Contact: React.FC = () => {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                            className={`cursor-pointer rounded-xl px-5 py-2 border-1 font-medium hover:text-primary transition-colors duration-300 capitalize `}
+                            style={{
+                                color: 'var(--color-text-primary)',
+                                borderColor: 'var(--color-border)',
+                                backgroundColor: 'var(--color-card-bg)',
+                            }}
                         >
                             {isSubmitting ? '送信中...' : '送信'}
                         </button>
