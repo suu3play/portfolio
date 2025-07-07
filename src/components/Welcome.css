@@ -1,0 +1,27 @@
+.welcome-overlay {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.welcome-message {
+    font-size: 1.5rem;
+    color: #222;
+    text-align: center;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
