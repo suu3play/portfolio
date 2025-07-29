@@ -73,22 +73,29 @@ export const projects: Project[] = [
         tags: ['C#', 'SQL', 'Oracle'],
     },
     {
-        id: 1,
+        id: 2,
         title: 'Webシステム移行',
         description: 'C#デスクトップアプリからWebシステムへの移行',
         tags: ['.NET', 'HTML', 'CSS', 'JavaScript', 'SQL Server', 'intramart'],
     },
     {
-        id: 2,
+        id: 3,
         title: '業務自動化システム',
         description: '既存システムととの連携や定型作業の完全自動化',
         tags: ['Power Automate', 'Python'],
     },
     {
-        id: 3,
+        id: 4,
         title: '電子帳簿保存法対応システム',
         description: '既存システムとAPI連携した電子帳簿保存法対応',
         tags: ['Python'],
+    },
+    {
+        id: 5,
+        title: '🌈 趣味予報 (hobby-weather)',
+        description: '天気予報に基づいて趣味に最適なタイミングを提案するWebアプリケーション。屋外・屋内活動の違い、温度・天気の好み、降水確率などを総合的に分析し、7日間の予報から最適な活動日をおすすめ',
+        tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'IndexedDB', 'OpenWeatherMap API'],
+        githubUrl: 'https://github.com/suu3play/hobby-weather',
     },
 ];
 
