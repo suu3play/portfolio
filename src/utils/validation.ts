@@ -77,12 +77,13 @@ export const validateField = (fieldName: keyof ContactFormData, value: string): 
       if (value.trim().length > 50) return 'お名前は50文字以内で入力してください。';
       return null;
 
-    case 'email':
+    case 'email': {
       if (!value.trim()) return null;
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       if (!emailRegex.test(value.trim())) return '有効なメールアドレスを入力してください。';
       if (value.trim().length > 254) return 'メールアドレスが長すぎます。';
       return null;
+    }
 
     case 'message':
       if (!value.trim()) return null;
