@@ -26,6 +26,11 @@ export const skillCategories: SkillCategory[] = [
         title: 'バックエンド',
         skills: [
             { name: 'C#', icon: 'fab fa-microsoft', color: 'text-green-700' },
+            {
+                name: '.NET 8',
+                icon: 'fab fa-microsoft',
+                color: 'text-purple-600',
+            },
             { name: 'Python', icon: 'fab fa-python', color: 'text-yellow-500' },
             {
                 name: 'SQL Server',
@@ -48,6 +53,12 @@ export const skillCategories: SkillCategory[] = [
                 color: 'text-pink-400',
             },
             { name: 'VBA', icon: 'fas fa-file-excel', color: 'text-green-600' },
+        ],
+    },
+    {
+        title: 'デスクトップアプリ',
+        skills: [
+            { name: 'WPF', icon: 'fab fa-windows', color: 'text-blue-600' },
         ],
     },
     {
@@ -92,10 +103,25 @@ export const projects: Project[] = [
     },
     {
         id: 5,
-        title: '🌈 趣味予報 (hobby-weather)',
-        description: '天気予報に基づいて趣味に最適なタイミングを提案するWebアプリケーション。屋外・屋内活動の違い、温度・天気の好み、降水確率などを総合的に分析し、7日間の予報から最適な活動日をおすすめ',
-        tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'IndexedDB', 'OpenWeatherMap API'],
+        title: '🌈 趣味予報',
+        description:
+            '天気予報に基づいて趣味に最適なタイミングを提案するWebアプリケーション。屋外・屋内活動の違い、温度・天気の好み、降水確率などを総合的に分析し、7日間の予報から最適な活動日をおすすめ',
+        tags: [
+            'React',
+            'TypeScript',
+            'Tailwind CSS',
+            'IndexedDB',
+            'OpenWeatherMap API',
+        ],
         githubUrl: 'https://github.com/suu3play/hobby-weather',
+    },
+    {
+        id: 6,
+        title: '📁 Finder Scope',
+        description:
+            '高性能ファイル検索・置換ツール。ファイル名・内容検索、フィルタリング、CSV/JSON/HTML形式でのエクスポート機能を提供',
+        tags: ['.NET 8', 'C#', 'WPF'],
+        githubUrl: 'https://github.com/suu3play/finder-scope',
     },
 ];
 
