@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://suu3play.github.io/portfolio/sitemap.xml
+
+# 一般的なクローラーへの指示
+Crawl-delay: 1
+
+# Disallow specific paths (例：プライベートファイル)
+# Disallow: /private/
+# Disallow: /admin/
