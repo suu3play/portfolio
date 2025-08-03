@@ -82,24 +82,28 @@ export const projects: Project[] = [
         description:
             '住民基本台帳・税関連（住民税、国保税、固定資産税等）・福祉情報に関わる事務処理システムの設計、開発、運用、保守',
         tags: ['C#', 'SQL', 'Oracle'],
+        // 業務システムのため非公開
     },
     {
         id: 2,
         title: 'Webシステム移行',
         description: 'C#デスクトップアプリからWebシステムへの移行',
         tags: ['.NET', 'HTML', 'CSS', 'JavaScript', 'SQL Server', 'intramart'],
+        // 業務システムのため非公開
     },
     {
         id: 3,
         title: '業務自動化システム',
         description: '既存システムととの連携や定型作業の完全自動化',
         tags: ['Power Automate', 'Python'],
+        // 業務システムのため非公開
     },
     {
         id: 4,
         title: '電子帳簿保存法対応システム',
         description: '既存システムとAPI連携した電子帳簿保存法対応',
         tags: ['Python'],
+        // 業務システムのため非公開
     },
     {
         id: 5,

@@ -40,20 +40,38 @@ const Projects: React.FC = () => {
                                     ))}
                                 </div>
                                 <div className="flex gap-4">
-                                    <a
-                                        href={project.githubUrl || '#'}
-                                        className="flex items-center gap-2 text-primary hover:text-blue-600 transition-colors duration-300"
-                                    >
-                                        <i className="fab fa-github"></i>
-                                        GitHub
-                                    </a>
-                                    <a
-                                        href={project.demoUrl || '#'}
-                                        className="flex items-center gap-2 text-primary hover:text-blue-600 transition-colors duration-300"
-                                    >
-                                        <i className="fas fa-external-link-alt"></i>
-                                        Live Demo
-                                    </a>
+                                    {project.githubUrl ? (
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-primary hover:text-blue-600 transition-colors duration-300"
+                                        >
+                                            <i className="fab fa-github"></i>
+                                            GitHub
+                                        </a>
+                                    ) : (
+                                        <span className="flex items-center gap-2 text-gray-400 cursor-not-allowed">
+                                            <i className="fab fa-github"></i>
+                                            GitHub（非公開）
+                                        </span>
+                                    )}
+                                    {project.demoUrl ? (
+                                        <a
+                                            href={project.demoUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-primary hover:text-blue-600 transition-colors duration-300"
+                                        >
+                                            <i className="fas fa-external-link-alt"></i>
+                                            Live Demo
+                                        </a>
+                                    ) : (
+                                        <span className="flex items-center gap-2 text-gray-400 cursor-not-allowed">
+                                            <i className="fas fa-external-link-alt"></i>
+                                            Live Demo（準備中）
+                                        </span>
+                                    )}
                                 </div>
                             </div>
                         </div>
