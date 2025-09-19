@@ -127,6 +127,14 @@ export const projects: Project[] = [
         tags: ['.NET 8', 'C#', 'WPF'],
         githubUrl: 'https://github.com/suu3play/finder-scope',
     },
+    {
+        id: 7,
+        title: '📊 clilog-viewer',
+        description:
+            'AI CLIツールの会話ログをMarkdownファイルに変換し、高速チャットビューアーで表示するツール。SQLiteキャッシュによる50-150倍高速化、リアルタイムログ監視、Virtual Scrolling対応',
+        tags: ['Python', 'Flask', 'SQLite', 'JavaScript', 'HTML/CSS'],
+        githubUrl: 'https://github.com/suu3play/clilog-viewer',
+    },
 ];
 
 export const services: Service[] = [
