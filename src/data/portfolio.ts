@@ -135,6 +135,14 @@ export const projects: Project[] = [
         tags: ['Python', 'Flask', 'SQLite', 'JavaScript', 'HTML/CSS'],
         githubUrl: 'https://github.com/suu3play/clilog-viewer',
     },
+    {
+        id: 8,
+        title: '💰 Value-me',
+        description:
+            '給与情報、労働時間、福利厚生などを総合的に考慮して正確な時給を算出するWebアプリケーション。月収・年収ベースでの計算、各種手当・ボーナス考慮、リアルタイム計算結果更新が特徴',
+        tags: ['React', 'TypeScript', 'Material-UI', 'Vite', 'Emotion'],
+        githubUrl: 'https://github.com/suu3play/value-me',
+    },
 ];
 
 export const services: Service[] = [
