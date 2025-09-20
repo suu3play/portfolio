@@ -1,5 +1,6 @@
 import React from 'react';
 import { projects } from '../data/portfolio';
+import ProjectImage from './ProjectImage';
 
 const Projects: React.FC = () => {
     return (
@@ -17,11 +18,12 @@ const Projects: React.FC = () => {
                                 backgroundColor: 'var(--color-card-bg)',
                             }}
                         >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <span className="text-gray-500 text-lg">
-                                    プロジェクト画像
-                                </span>
-                            </div>
+                            <ProjectImage
+                                src={project.imageUrl}
+                                fallback={project.imageFallback}
+                                alt={`${project.title}のプロジェクト画像`}
+                                className="h-48"
+                            />
                             <div className="p-6">
                                 <h3 className="text-xl font-semibold text-secondary mb-3">
                                     {project.title}
