@@ -13,10 +13,9 @@ export const skillCategories: SkillCategory[] = [
             { name: 'HTML', icon: 'fab fa-html5', color: 'text-orange-500' },
             { name: 'CSS', icon: 'fab fa-css3-alt', color: 'text-blue-500' },
             { name: 'JavaScript', icon: 'fab fa-js-square', color: 'text-yellow-400' },
-            { name: 'React 19', icon: 'fab fa-react', color: 'text-cyan-400' },
+            { name: 'React', icon: 'fab fa-react', color: 'text-cyan-400' },
             { name: 'TypeScript', icon: 'fab fa-js-square', color: 'text-blue-600' },
-            { name: 'TailwindCSS v4', icon: 'fas fa-wind', color: 'text-sky-400' },
-            { name: 'Material-UI', icon: 'fab fa-material-ui', color: 'text-blue-500' },
+            { name: 'TailwindCSS', icon: 'fas fa-wind', color: 'text-sky-400' },
             { name: 'Next.js', icon: 'fab fa-js-square', color: 'text-gray-700' },
         ],
     },
@@ -41,23 +40,6 @@ export const skillCategories: SkillCategory[] = [
         ],
     },
     {
-        title: '開発ツール',
-        skills: [
-            { name: 'Vite', icon: 'fas fa-bolt', color: 'text-yellow-500' },
-            { name: 'ESLint', icon: 'fas fa-check-circle', color: 'text-purple-600' },
-            { name: 'Prettier', icon: 'fas fa-magic', color: 'text-pink-500' },
-            { name: 'TypeScript ESLint', icon: 'fas fa-shield-alt', color: 'text-blue-600' },
-        ],
-    },
-    {
-        title: 'クラウド・デプロイ',
-        skills: [
-            { name: 'Vercel', icon: 'fas fa-cloud', color: 'text-gray-700' },
-            { name: 'GitHub Actions', icon: 'fab fa-github', color: 'text-gray-800' },
-            { name: 'GitHub Pages', icon: 'fab fa-github', color: 'text-blue-600' },
-        ],
-    },
-    {
         title: 'デスクトップアプリ',
         skills: [
             { name: 'WPF', icon: 'fab fa-windows', color: 'text-blue-600' },
@@ -68,8 +50,7 @@ export const skillCategories: SkillCategory[] = [
         skills: [
             { name: 'Git', icon: 'fab fa-git-alt', color: 'text-orange-600' },
             { name: 'Docker', icon: 'fab fa-docker', color: 'text-blue-500' },
-            { name: 'EmailJS', icon: 'fas fa-envelope', color: 'text-red-500' },
-            { name: 'AI CLI Tools', icon: 'fas fa-robot', color: 'text-purple-500' },
+            { name: 'Claude', icon: 'fas fa-robot', color: 'text-purple-500' },
         ],
     },
 ];
