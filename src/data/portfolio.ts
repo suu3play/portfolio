@@ -62,6 +62,7 @@ export const projects: Project[] = [
         description:
             '住民基本台帳・税関連（住民税、国保税、固定資産税等）・福祉情報に関わる事務処理システムの設計、開発、運用、保守',
         tags: ['C#', 'SQL', 'Oracle'],
+        imageUrl: '/images/projects/project-placeholder.svg',
         // 業務システムのため非公開
     },
     {
@@ -69,6 +70,7 @@ export const projects: Project[] = [
         title: 'Webシステム移行',
         description: 'C#デスクトップアプリからWebシステムへの移行',
         tags: ['.NET', 'HTML', 'CSS', 'JavaScript', 'SQL Server', 'intramart'],
+        imageUrl: '/images/projects/project-placeholder.svg',
         // 業務システムのため非公開
     },
     {
@@ -76,6 +78,7 @@ export const projects: Project[] = [
         title: '業務自動化システム',
         description: '既存システムととの連携や定型作業の完全自動化',
         tags: ['Power Automate', 'Python'],
+        imageUrl: '/images/projects/project-placeholder.svg',
         // 業務システムのため非公開
     },
     {
@@ -83,6 +86,7 @@ export const projects: Project[] = [
         title: '電子帳簿保存法対応システム',
         description: '既存システムとAPI連携した電子帳簿保存法対応',
         tags: ['Python'],
+        imageUrl: '/images/projects/project-placeholder.svg',
         // 業務システムのため非公開
     },
     {
@@ -98,6 +102,7 @@ export const projects: Project[] = [
             'OpenWeatherMap API',
         ],
         githubUrl: 'https://github.com/suu3play/hobby-weather',
+        imageUrl: '/images/projects/project-placeholder.svg',
     },
     {
         id: 6,
@@ -106,6 +111,7 @@ export const projects: Project[] = [
             '高性能ファイル検索・置換ツール。ファイル名・内容検索、フィルタリング、CSV/JSON/HTML形式でのエクスポート機能を提供',
         tags: ['.NET 8', 'C#', 'WPF'],
         githubUrl: 'https://github.com/suu3play/finder-scope',
+        imageUrl: '/images/projects/project-placeholder.svg',
     },
     {
         id: 7,
@@ -114,6 +120,7 @@ export const projects: Project[] = [
             'AI CLIツールの会話ログをMarkdownファイルに変換し、高速チャットビューアーで表示するツール。SQLiteキャッシュによる50-150倍高速化、リアルタイムログ監視、Virtual Scrolling対応',
         tags: ['Python', 'Flask', 'SQLite', 'JavaScript', 'HTML/CSS'],
         githubUrl: 'https://github.com/suu3play/clilog-viewer',
+        imageUrl: '/images/projects/project-placeholder.svg',
     },
     {
         id: 8,
@@ -122,6 +129,7 @@ export const projects: Project[] = [
             '給与情報、労働時間、福利厚生などを総合的に考慮して正確な時給を算出するWebアプリケーション。月収・年収ベースでの計算、各種手当・ボーナス考慮、リアルタイム計算結果更新が特徴',
         tags: ['React', 'TypeScript', 'Material-UI', 'Vite', 'Emotion'],
         githubUrl: 'https://github.com/suu3play/value-me',
+        imageUrl: '/images/projects/project-placeholder.svg',
     },
 ];
 

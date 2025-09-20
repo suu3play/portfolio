@@ -16,6 +16,8 @@ export interface Project {
     tags: string[];
     githubUrl?: string;
     demoUrl?: string;
+    imageUrl?: string;
+    imageFallback?: string;
 }
 
 export interface Service {
