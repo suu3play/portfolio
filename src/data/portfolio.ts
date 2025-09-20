@@ -185,8 +185,13 @@ export const socialLinks: SocialLink[] = [
     },
     { name: 'Qiita', url: 'https://qiita.com/suu3play', icon: 'fas fa-edit' },
     {
-        name: 'Twitter',
-        url: 'https://twitter.com/@suu3play',
-        icon: 'fab fa-twitter',
+        name: 'X',
+        url: 'https://x.com/suu3play',
+        icon: 'fab fa-x-twitter',
+    },
+    {
+        name: 'LinkedIn',
+        url: 'https://linkedin.com/in/suu3play',
+        icon: 'fab fa-linkedin',
     },
 ];

@@ -48,13 +48,13 @@ const Hero: React.FC = () => {
                     <div className="text-lg font-semibold flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in-up [animation-delay:0.6s]">
                         <button
                             onClick={() => scrollToSection('services')}
-                            className="px-8 py-3 rounded-full transition-all bg-blue-500 text-white hover:bg-blue-600 hover:-translate-y-0.5"
+                            className="px-8 py-3 rounded-full transition-all bg-blue-500 text-white hover:bg-blue-600 hover:-translate-y-0.5 cursor-pointer"
                         >
                             サービスを見る
                         </button>
                         <button
                             onClick={() => scrollToSection('contact')}
-                            className="px-8 py-3 rounded-full transition-all border-1 border-white-600 hover:bg-white hover:text-gray-800"
+                            className="px-8 py-3 rounded-full transition-all border-1 border-white-600 hover:bg-white hover:text-gray-800 cursor-pointer"
                         >
                             お問い合わせ
                         </button>
