@@ -7,7 +7,7 @@ const ThemeToggle: React.FC = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="relative w-14 h-7 bg-gray-300 dark:bg-gray-600 rounded-full p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            className="relative w-14 h-7 bg-gray-300 dark:bg-gray-600 rounded-full p-1 transition-all duration-300 ease-out hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
             aria-label={
                 isDark ? 'ライトモードに切り替え' : 'ダークモードに切り替え'
             }
