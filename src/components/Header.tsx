@@ -76,7 +76,7 @@ const Header: React.FC = () => {
                             <li key={id}>
                                 <button
                                     onClick={() => scrollToSection(id)}
-                                    className={`cursor-pointer rounded-xl px-5 py-2 border-1 font-medium hover:text-primary transition-colors duration-300 capitalize ${isScrolled ? 'shadow-lg' : ''}`}
+                                    className={`cursor-pointer rounded-xl px-5 py-2 border-1 font-medium hover:text-primary hover:scale-102 hover:shadow-md transition-all duration-300 ease-out capitalize ${isScrolled ? 'shadow-lg' : ''}`}
                                     style={{
                                         color: 'var(--color-text-primary)',
                                         borderColor: 'var(--color-border)',

@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
                                     href={link.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+                                    className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 hover:rotate-3 hover:shadow-lg transition-all duration-300 ease-out"
                                 >
                                     <i className={link.icon}></i>
                                 </a>
@@ -238,7 +238,7 @@ const Contact: React.FC = () => {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full px-8 py-4 bg-primary text-white rounded-lg font-semibold transition-all duration-300 hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer flex items-center justify-center gap-2"
+                            className="w-full px-8 py-4 bg-primary text-white rounded-lg font-semibold transition-all duration-300 ease-out hover:bg-blue-600 hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none cursor-pointer flex items-center justify-center gap-2"
                         >
                             {isSubmitting ? (
                                 <>
