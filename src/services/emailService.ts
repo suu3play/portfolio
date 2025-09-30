@@ -40,7 +40,7 @@ export const sendContactEmail = async (data: EmailData): Promise<EmailResponse> 
       await new Promise(resolve => setTimeout(resolve, 1500));
       return {
         success: true,
-        message: 'メッセージを受け取りました（デモモード）\n※ 実際のメール送信にはEmailJS設定が必要です'
+        message: 'お問い合わせ内容を確認いたしました。ありがとうございます！\n（現在はデモモードで動作しています）'
       };
     }
 
@@ -71,15 +71,15 @@ export const sendContactEmail = async (data: EmailData): Promise<EmailResponse> 
     console.error('Email sending failed:', error);
     
     // エラータイプ別処理
-    let errorMessage = 'メッセージの送信に失敗しました。';
-    
+    let errorMessage = '申し訳ございません。メッセージの送信中に問題が発生しました。しばらく経ってから再度お試しください。';
+
     if (error instanceof Error) {
       if (error.message.includes('The Public Key is invalid')) {
-        errorMessage = 'EmailJS設定エラーです。デモモードで動作しています。\n※ 実際のメール送信には正しい設定が必要です。';
+        errorMessage = '現在、お問い合わせ機能の準備中です。申し訳ございませんが、しばらくお待ちください。';
       } else if (error.message.includes('network')) {
-        errorMessage = 'ネットワークエラーが発生しました。インターネット接続を確認してください。';
+        errorMessage = 'インターネット接続に問題があるようです。接続をご確認の上、もう一度お試しください。';
       } else if (error.message.includes('quota')) {
-        errorMessage = '送信制限に達しました。しばらく時間をおいてから再度お試しください。';
+        errorMessage = '一時的に送信が混み合っております。少し時間をおいてから再度お試しいただけますでしょうか。';
       }
     }
     
