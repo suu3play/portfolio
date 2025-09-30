@@ -98,7 +98,7 @@ const Header: React.FC = () => {
 
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden flex flex-col gap-1 cursor-pointer"
+                    className="md:hidden flex flex-col gap-1 cursor-pointer hover:scale-105 transition-transform duration-300"
                     aria-label="Toggle menu"
                 >
                     <span
