@@ -74,8 +74,6 @@ const ProjectImage: React.FC<ProjectImageProps> = ({
                 className={`w-full h-full object-cover transition-opacity duration-300 ${
                     isLoaded ? 'opacity-100' : 'opacity-0'
                 }`}
-                role="img"
-                aria-label={alt}
             />
             {!isLoaded && (
                 <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
