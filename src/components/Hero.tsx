@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
                 backgroundImage: 'var(--color-bg-hero)',
             }}
         >
-            <div className="max-w-4xl mx-auto px-5 flex flex-col md:flex-row items-center gap-8">
+            <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-1 max-w-2xl text-center md:text-left">
                     <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in-up">
                         {displayText}
