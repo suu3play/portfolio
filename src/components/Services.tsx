@@ -4,7 +4,7 @@ import { services } from '../data/portfolio';
 const Services: React.FC = () => {
     return (
         <section id="services" className="py-20">
-            <div className="max-w-6xl mx-auto px-5">
+            <div className="max-w-6xl mx-auto px-6">
                 <h2 className="text-center text-4xl font-bold mb-12 relative after:content-[''] after:absolute after:bottom-[-10px] after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-primary after:rounded-full after:block">
                     担当範囲
                 </h2>
