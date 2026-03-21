@@ -94,8 +94,10 @@ export const sendContactEmail = async (data: EmailData): Promise<EmailResponse> 
  * EmailJS設定状況を確認
  */
 export const checkEmailJSConfig = (): boolean => {
-  return !!(emailJSConfig.serviceId && 
-           emailJSConfig.templateId && 
+  return !!(emailJSConfig.serviceId &&
+           emailJSConfig.templateId &&
            emailJSConfig.publicKey &&
-           emailJSConfig.serviceId !== 'demo_service');
+           emailJSConfig.serviceId !== 'demo_service' &&
+           emailJSConfig.templateId !== 'demo_template' &&
+           emailJSConfig.publicKey !== 'demo_key');
 };

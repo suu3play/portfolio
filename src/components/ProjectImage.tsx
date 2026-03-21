@@ -20,6 +20,11 @@ const ProjectImage: React.FC<ProjectImageProps> = ({
     const [currentSrc, setCurrentSrc] = useState<string>(fallback);
 
     useEffect(() => {
+        if (typeof IntersectionObserver === 'undefined') {
+            setIsInView(true);
+            return;
+        }
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -46,6 +51,10 @@ const ProjectImage: React.FC<ProjectImageProps> = ({
             }
         };
     }, []);
+
+    useEffect(() => {
+        setIsLoaded(false);
+    }, [src]);
 
     useEffect(() => {
         if (isInView && src && !hasError) {

@@ -2,6 +2,7 @@ import React from 'react';
 import { skillCategories } from '../data/portfolio';
 
 const Skills: React.FC = () => {
+    const safeSkillCategories = skillCategories ?? [];
     return (
         <section id="skills" className="py-20">
             <div className="max-w-6xl mx-auto px-6">
@@ -9,9 +10,9 @@ const Skills: React.FC = () => {
                     スキル
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {skillCategories.map((category, index) => (
+                    {safeSkillCategories.map((category) => (
                         <div
-                            key={index}
+                            key={category.title}
                             className=" p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300"
                             style={{
                                 backgroundColor: 'var(--color-card-bg)',
@@ -21,9 +22,9 @@ const Skills: React.FC = () => {
                                 {category.title}
                             </h3>
                             <div className="grid grid-cols-2 gap-4">
-                                {category.skills.map((skill, skillIndex) => (
+                                {category.skills.map((skill) => (
                                     <div
-                                        key={skillIndex}
+                                        key={skill.name}
                                         className="flex flex-col items-center px-2 py-4 text-center rounded-lg transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105"
                                         style={{
                                             backgroundColor:

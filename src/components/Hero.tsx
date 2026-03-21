@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Hero: React.FC = () => {
     const fullText = 'こんにちは、suu3と言います';
-    const [displayText] = useState(fullText);
+    const displayText = fullText;
 
     //     useEffect(() => {
     //         let i = 0;
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
             // className="min-h-screen flex items-center pt-20 pb-5 bg-gradient-to-br  from-blue-700 to-purple-600 dark:from-slate-900  dark:to-indigo-900 text-white"
             className="min-h-screen flex items-center pt-20 pb-5"
             style={{
-                backgroundImage: 'var(--color-bg-hero)',
+                backgroundImage: 'var(--color-bg-hero, linear-gradient(135deg, #667eea 0%, #764ba2 100%))',
             }}
         >
             <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">

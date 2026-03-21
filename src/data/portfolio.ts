@@ -76,7 +76,7 @@ export const projects: Project[] = [
     {
         id: 3,
         title: '業務自動化システム',
-        description: '既存システムととの連携や定型作業の完全自動化',
+        description: '既存システムとの連携や定型作業の完全自動化',
         tags: ['Power Automate', 'Python'],
         imageUrl: '/images/projects/project-placeholder.svg',
         // 業務システムのため非公開

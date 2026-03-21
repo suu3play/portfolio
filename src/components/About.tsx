@@ -27,12 +27,12 @@ const About: React.FC = () => {
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
-                            {stats.map((stat, index) => (
-                                <div key={index} className="text-center">
+                            {stats.map((stat) => (
+                                <div key={stat.label} className="text-center">
                                     <span className="block text-4xl font-bold text-primary mb-2">
                                         {stat.number}
                                     </span>
-                                    <span className="text-sm" style={{}}>
+                                    <span className="text-sm">
                                         {stat.label}
                                     </span>
                                 </div>

@@ -11,7 +11,6 @@ const ThemeToggle: React.FC = () => {
             aria-label={
                 isDark ? 'ライトモードに切り替え' : 'ダークモードに切り替え'
             }
-            title={isDark ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}
         >
             {/* Toggle Circle */}
             <div

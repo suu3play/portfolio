@@ -13,11 +13,14 @@ const App: React.FC = () => {
     const [showWelcome, setShowWelcome] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
 
+    const FADE_START_MS = 1000;
+    const FADE_DURATION_MS = 2000;
+
     useEffect(() => {
-        // 2秒後にフェードアウト開始
-        const timer1 = setTimeout(() => setFadeOut(true), 1000);
-        // 3秒後にWelcomeを非表示
-        const timer2 = setTimeout(() => setShowWelcome(false), 3000);
+        // FADE_START_MS 後にフェードアウト開始
+        const timer1 = setTimeout(() => setFadeOut(true), FADE_START_MS);
+        // フェードアウト完了後にWelcomeを非表示
+        const timer2 = setTimeout(() => setShowWelcome(false), FADE_START_MS + FADE_DURATION_MS);
         return () => {
             clearTimeout(timer1);
             clearTimeout(timer2);
