@@ -8,30 +8,32 @@ export const useTheme = () => {
     if (typeof window === 'undefined') return 'light';
     
     // LocalStorageから保存済みテーマを取得
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme) return savedTheme;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
     
     // システム設定を確認
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const root = window.document.documentElement;
-    
+
     // 以前のテーマクラスを削除
     root.classList.remove('light', 'dark');
-    
+
     // 新しいテーマクラスを追加
     root.classList.add(theme);
-    
+
     // LocalStorageに保存
     localStorage.setItem('theme', theme);
   }, [theme]);
 
   // システム設定変更の監視
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
+
     const handleChange = (e: MediaQueryListEvent) => {
       // LocalStorageに保存済みの設定がない場合のみシステム設定に従う
       if (!localStorage.getItem('theme')) {

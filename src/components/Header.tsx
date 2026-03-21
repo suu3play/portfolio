@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
 
+const NAV_ITEMS = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'スキル' },
+    { id: 'services', label: '担当範囲' },
+    { id: 'projects', label: 'プロジェクト' },
+    { id: 'contact', label: 'お問い合わせ' },
+] as const;
+
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +47,7 @@ const Header: React.FC = () => {
             style={{
                 backgroundColor: isScrolled
                     ? 'var(--color-bg-primary)'
-                    : 'var(--color-bg-primary)',
+                    : 'transparent',
             }}
         >
             <nav className="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
@@ -65,14 +74,7 @@ const Header: React.FC = () => {
                                 : 'transparent',
                         }}
                     >
-                        {[
-                            { id: 'home', label: 'Home' },
-                            { id: 'about', label: 'About' },
-                            { id: 'skills', label: 'スキル' },
-                            { id: 'services', label: '担当範囲' }, // 表示名だけ変えたい例
-                            { id: 'projects', label: 'プロジェクト' },
-                            { id: 'contact', label: 'お問い合わせ' },
-                        ].map(({ id, label }) => (
+                        {NAV_ITEMS.map(({ id, label }) => (
                             <li key={id}>
                                 <button
                                     onClick={() => scrollToSection(id)}

@@ -2,6 +2,7 @@ import React from 'react';
 import { services } from '../data/portfolio';
 
 const Services: React.FC = () => {
+    const safeServices = services ?? [];
     return (
         <section id="services" className="py-20">
             <div className="max-w-6xl mx-auto px-6">
@@ -9,7 +10,7 @@ const Services: React.FC = () => {
                     担当範囲
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {services.map((service) => (
+                    {safeServices.map((service) => (
                         <div
                             key={service.id}
                             className="bg-white p-8 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-1"
@@ -26,9 +27,9 @@ const Services: React.FC = () => {
                                 </h3>
                             </div>
                             <ul className="space-y-3">
-                                {service.items.map((item, index) => (
+                                {service.items.map((item) => (
                                     <li
-                                        key={index}
+                                        key={item}
                                         className="flex items-start gap-3 border-b border-gray-100 pb-2 last:border-b-0"
                                     >
                                         <span className="text-primary font-bold mt-1 flex-shrink-0">

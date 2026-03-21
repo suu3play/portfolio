@@ -2,6 +2,10 @@ import React from 'react';
 import { projects } from '../data/portfolio';
 import ProjectImage from './ProjectImage';
 
+const isValidUrl = (url: string): boolean => {
+    return url.startsWith('https://') || url.startsWith('http://');
+};
+
 const Projects: React.FC = () => {
     return (
         <section id="projects" className="py-20 ">
@@ -32,9 +36,9 @@ const Projects: React.FC = () => {
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-6">
-                                    {project.tags.map((tag, index) => (
+                                    {project.tags.map((tag) => (
                                         <span
-                                            key={index}
+                                            key={tag}
                                             className="bg-primary text-white px-3 py-1 rounded-full text-sm"
                                         >
                                             {tag}
@@ -42,7 +46,7 @@ const Projects: React.FC = () => {
                                     ))}
                                 </div>
                                 <div className="flex gap-4">
-                                    {project.githubUrl ? (
+                                    {project.githubUrl && isValidUrl(project.githubUrl) ? (
                                         <a
                                             href={project.githubUrl}
                                             target="_blank"
@@ -58,7 +62,7 @@ const Projects: React.FC = () => {
                                             GitHub（非公開）
                                         </span>
                                     )}
-                                    {project.demoUrl ? (
+                                    {project.demoUrl && isValidUrl(project.demoUrl) ? (
                                         <a
                                             href={project.demoUrl}
                                             target="_blank"

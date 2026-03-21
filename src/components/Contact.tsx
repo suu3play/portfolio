@@ -36,12 +36,12 @@ const Contact: React.FC = () => {
     }, []);
 
     // フォーム入力変更ハンドラー
-    const handleInputChange = (
+    const handleInputChange = useCallback((
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         const { name, value } = e.target;
         const fieldName = name as keyof ContactFormData;
-        
+
         setFormData((prev) => ({
             ...prev,
             [name]: value,
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
             ...prev,
             [name]: error
         }));
-    };
+    }, []);
 
     // フォーム送信ハンドラー
     const handleSubmit = async (e: React.FormEvent) => {
@@ -123,7 +123,9 @@ const Contact: React.FC = () => {
                         </div>
 
                         <div className="flex gap-4">
-                            {socialLinks.map((link, index) => (
+                            {socialLinks
+                                .filter((link) => link.url.startsWith('https://'))
+                                .map((link, index) => (
                                 <a
                                     key={index}
                                     href={link.url}

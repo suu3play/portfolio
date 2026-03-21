@@ -47,8 +47,8 @@ export const validateContactForm = (data: ContactFormData): ValidationResult => 
 
   // スパム対策：簡易チェック
   const spamPatterns = [
-    /https?:\/\/[^\s]+/gi, // URL含有チェック
-    /(.)\1{4,}/gi, // 同じ文字の5回以上連続
+    /https?:\/\/[^\s]+/i, // URL含有チェック
+    /(.)\1{4,}/i, // 同じ文字の5回以上連続
   ];
 
   const fullText = `${data.name} ${data.email} ${data.message}`.toLowerCase();
